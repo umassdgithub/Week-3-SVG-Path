@@ -15,7 +15,6 @@ let setVars = ()=>{
     document.querySelector("#endX").value = endX
     document.querySelector("#endY").value = endY
     document.querySelector("#rotate").value = rotate
-    console.log(`M ${movetoX} ${movetoY} A ${rX} ${rY} ${rotate} 0 0 ${endX} ${endY}`)
     document.querySelector("svg path").setAttribute("d",`M ${movetoX} ${movetoY} A ${rX} ${rY} ${rotate} 0 ${largeArcFlag} ${endX} ${endY}`)
     document.querySelector("text").textContent=`M ${movetoX} ${movetoY} A ${rX} ${rY} ${rotate} 0 ${largeArcFlag} ${endX} ${endY}`
 }
@@ -31,7 +30,6 @@ let getVars= ()=>{
     endY = parseFloat(document.querySelector("#endY").value)
     rotate = parseFloat(document.querySelector("#rotate").value)
     largeArcFlag = document.querySelector("#largeArcFlag").value
-    setVars()
 }
 
 
